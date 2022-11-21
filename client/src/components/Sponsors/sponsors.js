@@ -60,34 +60,38 @@ const Sponsors = () => {
   const accordionData = [
     {
       title: "Team Name0",
+      question: "why ?",
       content: `points offered :29`,
     },
     {
       title: "Team Name1",
+      question: "why ?",
       content: `points offered :29`,
     },
     {
       title: "Team Name2",
+      question: "why ?",
       content: `points offered :29`,
     },
     {
       title: "Team Name3",
+      question: "why ?",
       content: `points offered :29`,
     },
     {
       title: "Team Name4",
+      question: "why ?",
       content: `points offered :29`,
     },
   ];
-
   return (
     <div className="wrapper" id="sponsors">
       <br />
       <br />
       <div className="accordion">
-        <h1 className="title">Received offers</h1>
-        {accordionData.map(({ title, content }) => (
-          <Offermenu title={title} content={content} />
+        <h1 className="title">received offers</h1>
+        {accordionData.map(({ title, question, content }) => (
+          <Offermenu title={title} question={question} content={content} />
         ))}
       </div>
       <h1 id="sponsors" className="title">
@@ -99,7 +103,10 @@ const Sponsors = () => {
             className="col-sponsor"
             ontouchstart="this.classList.toggle('hover');"
           >
-            <div className="container">
+            <div
+              className="container"
+              ontouchstart="this.classList.toggle('hover');"
+            >
               <div
                 className="front"
                 style={
