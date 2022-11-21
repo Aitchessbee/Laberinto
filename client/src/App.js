@@ -20,6 +20,7 @@ import Grid from "./screens/grid-page/Grid";
 import Rules from "./screens/rulebook";
 import gameOver from "./components/win/gameover";
 import notFound from "./components/notfound/404";
+
 // import Mainport from './components/Portal/mainport';
 function App() {
   return (
@@ -28,7 +29,6 @@ function App() {
         <PersistGate persistor={persistor}>
           <Router>
             <Navbar />
-
             <Switch>
               <Route exact path="/" component={Landing} />
               <Route path="/login" component={Login} />

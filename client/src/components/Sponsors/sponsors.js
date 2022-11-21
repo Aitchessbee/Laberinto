@@ -1,4 +1,5 @@
 import "./sponsors.css";
+import Offermenu from "../OfferMenu/Offermenu";
 const Sponsors = () => {
   const arrayOfTeams = [
     {
@@ -56,13 +57,41 @@ const Sponsors = () => {
       teamEmail: "helpme@thapar.edu",
     },
   ];
+  const accordionData = [
+    {
+      title: "Team Name0",
+      content: `points offered :29`,
+    },
+    {
+      title: "Team Name1",
+      content: `points offered :29`,
+    },
+    {
+      title: "Team Name2",
+      content: `points offered :29`,
+    },
+    {
+      title: "Team Name3",
+      content: `points offered :29`,
+    },
+    {
+      title: "Team Name4",
+      content: `points offered :29`,
+    },
+  ];
 
   return (
     <div className="wrapper" id="sponsors">
       <br />
       <br />
+      <div className="accordion">
+        <h1 className="title">Received offers</h1>
+        {accordionData.map(({ title, content }) => (
+          <Offermenu title={title} content={content} />
+        ))}
+      </div>
       <h1 id="sponsors" className="title">
-        <b>Our Sponsors</b>
+        <b>TEAMS</b>
       </h1>
       {arrayOfTeams.map((team) => (
         <>
