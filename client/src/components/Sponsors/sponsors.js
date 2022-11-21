@@ -1,236 +1,165 @@
-import './sponsors.css'
-const Sponsors =()=>{
-  return(
-          <div className="wrapper" id="sponsors">
-          <br/>
-          <br/>
-            <h1 id='sponsors' className='title'><b>Our Sponsors</b></h1>
-            <div className="col-sponsors">
-              <div className="col-sponsor" ontouchstart="this.classList.toggle('hover');">
-                <div className="container">
-                  <div className="front" style={{backgroundImage: 'url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444822/Sponsors/grid_1_sp-WEB_01_hy9t1k.png)'}}>
-
-                  </div>
-                  <div className="back">
-                  <div className="inner">
-                      <p className='title'>StreamYard</p>
-                      <span>Associate Sponsor</span>
-                    </div>
-                  </div>
+import "./sponsors.css";
+import Offermenu from "../OfferMenu/Offermenu";
+const Sponsors = () => {
+  const arrayOfTeams = [
+    {
+      teamName: "Team Name1",
+      teamLevel: "level",
+      teamMobNumber: "Contact:9876543219",
+      teamEmail: "helpme@thapar.edu",
+    },
+    {
+      teamName: "Team Name2",
+      teamLevel: "level",
+      teamMobNumber: "Contact:9876543219",
+      teamEmail: "helpme@thapar.edu",
+    },
+    {
+      teamName: "Team Name3",
+      teamLevel: "level",
+      teamMobNumber: "Contact:9876543219",
+      teamEmail: "helpme@thapar.edu",
+    },
+    {
+      teamName: "Team Name4",
+      teamLevel: "level",
+      teamMobNumber: "Contact:9876543219",
+      teamEmail: "helpme@thapar.edu",
+    },
+    {
+      teamName: "Team Name5",
+      teamLevel: "level",
+      teamMobNumber: "Contact:9876543219",
+      teamEmail: "helpme@thapar.edu",
+    },
+    {
+      teamName: "Team Name6",
+      teamLevel: "level",
+      teamMobNumber: "Contact:9876543219",
+      teamEmail: "helpme@thapar.edu",
+    },
+    {
+      teamName: "Team Name7",
+      teamLevel: "level",
+      teamMobNumber: "Contact:9876543219",
+      teamEmail: "helpme@thapar.edu",
+    },
+    {
+      teamName: "Team Name8",
+      teamLevel: "level",
+      teamMobNumber: "Contact:9876543219",
+      teamEmail: "helpme@thapar.edu",
+    },
+    {
+      teamName: "Team Name9",
+      teamLevel: "level",
+      teamMobNumber: "Contact:9876543219",
+      teamEmail: "helpme@thapar.edu",
+    },
+  ];
+  const accordionData = [
+    {
+      title: "Team Name0",
+      question: "why ?",
+      content: `points offered :29`,
+    },
+    {
+      title: "Team Name1",
+      question: "why ?",
+      content: `points offered :29`,
+    },
+    {
+      title: "Team Name2",
+      question: "why ?",
+      content: `points offered :29`,
+    },
+    {
+      title: "Team Name3",
+      question: "why ?",
+      content: `points offered :29`,
+    },
+    {
+      title: "Team Name4",
+      question: "why ?",
+      content: `points offered :29`,
+    },
+  ];
+  return (
+    <div className="wrapper" id="sponsors">
+      <br />
+      <br />
+      <div className="accordion">
+        <h1 className="title">received offers</h1>
+        {accordionData.map(({ title, question, content }) => (
+          <Offermenu title={title} question={question} content={content} />
+        ))}
+      </div>
+      <h1 id="sponsors" className="title">
+        <b>TEAMS</b>
+      </h1>
+      {arrayOfTeams.map((team) => (
+        <>
+          <div
+            className="col-sponsor"
+            ontouchstart="this.classList.toggle('hover');"
+          >
+            <div
+              className="container"
+              ontouchstart="this.classList.toggle('hover');"
+            >
+              <div
+                className="front"
+                style={
+                  {
+                    // backgroundImage:
+                    //   "url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444822/Sponsors/grid_1_sp-WEB_01_hy9t1k.png)",
+                  }
+                }
+              >
+                <p className="title-front">{team.teamName}</p>
+                <p className="level">{team.teamLevel}</p>
+              </div>
+              <div className="back">
+                <div className="inner">
+                  <p className="level">
+                    {team.teamMobNumber}
+                    <br />
+                    {team.teamEmail}
+                  </p>
+                  <form action="" method="post">
+                    <input type="number" placeholder="Place a bid" />
+                    <button className="btn" type="submit">
+                      Submit Bid
+                    </button>
+                  </form>
                 </div>
               </div>
-              <div className="col-sponsor" ontouchstart="this.classList.toggle('hover');">
-                <div className="container">
-                  <div className="front" style={{backgroundImage: 'url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444822/Sponsors/grid_1_sp-WEB_02_jiqy5w.png)'}}>
-
-                  </div>
-                  <div className="back">
-                  <div className="inner">
-                      <p className='title'>repl.it</p>
-                      <span>Associate Sponsor</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sponsor" ontouchstart="this.classList.toggle('hover');">
-                <div className="container">
-                  <div className="front" style={{backgroundImage: 'url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444823/Sponsors/grid_1_sp-WEB_03_rwuesr.png)'}}>
-
-                  </div>
-                  <div className="back">
-                  <div className="inner">
-                      <p className='title'>Give My Certificate</p>
-                      <span>Associate Sponsor</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sponsor" ontouchstart="this.classList.toggle('hover');">
-                <div className="container">
-                  <div className="front" style={{backgroundImage: 'url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444823/Sponsors/grid_1_sp-WEB_04_olkvjf.png)'}}>
-
-                  </div>
-                  <div className="back">
-                  <div className="inner">
-                      <p className='title'>1Password</p>
-                      <span>Associate Sponsor</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sponsor" ontouchstart="this.classList.toggle('hover');">
-                <div className="container">
-                  <div className="front" style={{backgroundImage: 'url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444822/Sponsors/grid_1_sp-WEB_05_iqptbw.png)'}}>
-
-                  </div>
-                  <div className="back">
-                  <div className="inner">
-                      <p className='title'>taskade</p>
-                      <span>Associate Sponsor</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sponsor" ontouchstart="this.classList.toggle('hover');">
-                <div className="container">
-                  <div className="front" style={{backgroundImage: 'url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444823/Sponsors/grid_1_sp-WEB_06_ykq7dx.png)'}}>
-
-                  </div>
-                  <div className="back">
-                  <div className="inner">
-                      <p className='title'>balsamiq</p>
-                      <span>Associate Sponsor</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sponsor" ontouchstart="this.classList.toggle('hover');">
-                <div className="container">
-                  <div className="front" style={{backgroundImage: 'url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444823/Sponsors/grid_1_sp-WEB_07_z6lae2.png)'}}>
-
-                  </div>
-                  <div className="back">
-                  <div className="inner">
-                      <p className='title'>Badelog.in</p>
-                      <span>Associate Sponsor</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sponsor" ontouchstart="this.classList.toggle('hover');">
-                <div className="container">
-                  <div className="front" style={{backgroundImage: 'url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444823/Sponsors/grid_1_sp-WEB_08_xk6mxj.png)'}}>
-
-                  </div>
-                  <div className="back">
-                  <div className="inner">
-                      <p className='title'>Programming Pathshala</p>
-                      <span>Power Sponsor</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sponsor" ontouchstart="this.classList.toggle('hover');">
-                <div className="container">
-                  <div className="front" style={{backgroundImage: 'url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444823/Sponsors/grid_1_sp-WEB_09_lm5gcb.png)'}}>
-
-                  </div>
-                  <div className="back">
-                  <div className="inner">
-                      <p className='title'>Eduvantage Box</p>
-                      <span>Associate Sponsor</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sponsor" ontouchstart="this.classList.toggle('hover');">
-                <div className="container">
-                  <div className="front" style={{backgroundImage: 'url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444825/Sponsors/grid-WEB-1_04_nbzdjx.png)'}}>
-
-                  </div>
-                  <div className="back">
-                  <div className="inner">
-                      <p className='title'>Hover Robotics</p>
-                      <span>Associate Sponsor</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sponsor" ontouchstart="this.classList.toggle('hover');">
-                <div className="container">
-                  <div className="front" style={{backgroundImage: 'url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444824/Sponsors/grid-WEB-1_05_m0m0tt.png)'}}>
-
-                  </div>
-                  <div className="back">
-                  <div className="inner">
-                      <p className='title'>GeeksforGeeks</p>
-                      <span>Title Sponsor</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sponsor" ontouchstart="this.classList.toggle('hover');">
-                <div className="container">
-                  <div className="front" style={{backgroundImage: 'url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444824/Sponsors/grid-WEB-1_06_t1wmhy.png)'}}>
-
-                  </div>
-                  <div className="back">
-                  <div className="inner">
-                      <p className='title'>Rapz</p>
-                      <span>Associate Sponsor</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sponsor" ontouchstart="this.classList.toggle('hover');">
-                <div className="container">
-                  <div className="front" style={{backgroundImage: 'url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444824/Sponsors/grid-WEB-1_07_ozrcpx.png)'}}>
-
-                  </div>
-                  <div className="back">
-                  <div className="inner">
-                      <p className='title'>Interview Cake</p>
-                      <span>Associate Sponsor</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sponsor" ontouchstart="this.classList.toggle('hover');">
-                <div className="container">
-                  <div className="front" style={{backgroundImage: 'url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444824/Sponsors/grid-WEB-1_08_nuxyjt.png)'}}>
-
-                  </div>
-                  <div className="back">
-                  <div className="inner">
-                      <p className='title'>.xyz</p>
-                      <span>Power Sponsor</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sponsor" ontouchstart="this.classList.toggle('hover');">
-                <div className="container">
-                  <div className="front" style={{backgroundImage: 'url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444825/Sponsors/grid-WEB-1_09_rhpjtg.png)'}}>
-
-                  </div>
-                  <div className="back">
-                  <div className="inner">
-                      <p className='title'>Rosenfeld</p>
-                      <span>Associate Sponsor</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sponsor" ontouchstart="this.classList.toggle('hover');">
-                <div className="container">
-                  <div className="front" style={{backgroundImage: 'url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444824/Sponsors/grid-WEB-1_03_eihgfs.png)'}}>
-
-                  </div>
-                  <div className="back">
-                  <div className="inner">
-                      <p className='title'>MentorX</p>
-                      <span>Associate Sponsor</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sponsor" ontouchstart="this.classList.toggle('hover');">
-                <div className="container">
-                  <div className="front" style={{backgroundImage: 'url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444824/Sponsors/grid-WEB-1_02_nsgeea.png)'}}>
-
-                  </div>
-                  <div className="back">
-                  <div className="inner">
-                      <p className='title'>Coding Ninjas</p>
-                      <span>Associate Sponsor</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
             </div>
           </div>
-  )
-}
+        </>
+      ))}
+
+      <div
+        className="col-sponsor"
+        ontouchstart="this.classList.toggle('hover');"
+      >
+        <div className="container">
+          <div
+            className="front"
+            style={{
+              backgroundImage:
+                "url(https://res.cloudinary.com/dpphmkop0/image/upload/v1628444824/Sponsors/grid-WEB-1_02_nsgeea.png)",
+            }}
+          ></div>
+          <div className="back">
+            <div className="inner">
+              <p className="title">Coding Ninjas</p>
+              <span>Associate Sponsor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 export default Sponsors;

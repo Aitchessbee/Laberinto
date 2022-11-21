@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  font-family: "Montserrat";
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: "Montserrat";
+  font-weight: normal;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 2rem 0;
+}
+h3 {
+  font-family: "Montserrat";
+  font-weight: normal;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 2rem 0;
+}
+p {
+  text-align: justify;
+  font-size: 1.5rem;
+  font-family: "Montserrat";
+}
+.accordion {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.accordion-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #430303;
+}
+
+.accordion-title:hover {
+  background-color: #630000;
+}
+
+.accordion-title,
+.accordion-content {
+  padding: 1rem;
+}
+
+.accordion-content {
+  background: #630000;
+  background: -webkit-linear-gradient(0deg, #000 0%, #630000 100%);
+  background: -o-linear-gradient(0deg, #000 0%, #630000 100%);
+  background: linear-gradient(0deg, #000 0%, #630000 100%);
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 18px;
+  }
+
+  .accordion {
+    width: 90%;
+  }
+}
