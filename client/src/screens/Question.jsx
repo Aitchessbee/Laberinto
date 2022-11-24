@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { getQuestionsById, postAnswer } from '../actions/questions'
 import {useDispatch, useSelector} from 'react-redux'
-import {useHistory} from 'react-router-dom'
+import {useHistory, Link} from 'react-router-dom'
 import image1 from '../images/image_1.jpg'
 import image2 from '../images/image_2.png'
 import image3 from '../images/image_3.png'
@@ -12,7 +12,7 @@ import image6 from '../images/image6.jpg'
 import image7 from '../images/image7.png'
 import image8 from '../images/image8.jpg'
 import Notif from '../components/Toast/NewToast'
-import { getHints } from '../actions/questions'
+// import { getHints } from '../actions/questions'
 import {Badge, Modal, Spinner} from 'react-bootstrap'
 import { Fragment } from 'react'
 // import {Spinner} from 'react-bootstrap'
@@ -57,7 +57,10 @@ const Question = ({match}) => {
     }
     const hintHandler = (e) => {
         e.preventDefault();
-        dispatch(getHints(auth.key, match.params.qID));
+        // dispatch(getHints(auth.key, match.params.qID));
+
+        const reqUrl = "/hints/" + match.params.qID; 
+        <Link to={reqUrl} />  
         
     }
     const takeBack = () =>{
