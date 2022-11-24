@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { getQuestionsById, postAnswer } from '../actions/questions'
 import {useDispatch, useSelector} from 'react-redux'
-import {useHistory} from 'react-router-dom'
+import {useHistory, Link} from 'react-router-dom'
 import image1 from '../images/image_1.jpg'
 import image2 from '../images/image_2.png'
 import image3 from '../images/image_3.png'
@@ -12,7 +12,7 @@ import image6 from '../images/image6.jpg'
 import image7 from '../images/image7.png'
 import image8 from '../images/image8.jpg'
 import Notif from '../components/Toast/NewToast'
-import { getHints } from '../actions/questions'
+// import { getHints } from '../actions/questions'
 import {Badge, Modal, Spinner} from 'react-bootstrap'
 import { Fragment } from 'react'
 // import {Spinner} from 'react-bootstrap'
@@ -57,7 +57,11 @@ const Question = ({match}) => {
     }
     const hintHandler = (e) => {
         e.preventDefault();
-        dispatch(getHints(auth.key, match.params.qID));
+        // dispatch(getHints(auth.key, match.params.qID));
+
+        const reqUrl = "/hints/" + match.params.qID; 
+        <Link to={reqUrl} />  
+        
     }
     const takeBack = () =>{
       history.push(`/maze/${auth.checkpoint}`);
@@ -111,7 +115,7 @@ const Question = ({match}) => {
           {question && question.is_solved ?<Fragment><h4>You have already solved this question.</h4> <button onClick={nextRoom} className="goback-btn hint">Continue to next room</button></Fragment>
  : <Fragment>
             <div className='answer-submission'>
-            <input type='text' placeholder='answer' value={answer} onChange={e => setAnswer(e.target.value)} /><br/>
+            <input type='text' placeholder='ans1#ans2' value={answer} onChange={e => setAnswer(e.target.value)} /><br/>
             
             {questions.answerLoading ? <Spinner animation="border" variant="danger" className='answer-spinner'/>
             : <Fragment>{hint?
@@ -133,12 +137,12 @@ const Question = ({match}) => {
             </div>
             {questions.answer === 'incorrect'?
             <Notif text="Your answer was incorrect" color='danger'/>:''}
-            <Modal show={show} onHide={handleClose}>
+            {/* <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Hint</Modal.Title>
         </Modal.Header>
         <Modal.Body>{hint? hint.hint : (questions && questions.hintLoading ? <Spinner animation='border' variant='danger'/> :'Not enough points for hint')  }</Modal.Body>
-      </Modal>
+      </Modal> */}
         
         {question && question.error &&
           <Notif text={question.error} color='danger'/>

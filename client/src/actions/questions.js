@@ -91,27 +91,27 @@ export const postAnswer = (token, questionId, answer) => async dispatch => {
 
 // HINTS
 
-export const getHints = (token, questionId) => async dispatch => {
-    const config = {
-        headers: {
-            'Authorization': `Token ${token}`,
-        }
-    }
-    const body = {
-        "qID":`${questionId}`
-    }
+// export const getHints = (token, questionId) => async dispatch => {
+//     const config = {
+//         headers: {
+//             'Authorization': `Token ${token}`,
+//         }
+//     }
+//     const body = {
+//         "qID":`${questionId}`
+//     }
 
-    try {
-        dispatch({type: GET_HINTS_REQUEST})
-        const res = await axios.post(proxy + '/api/hint/',body, config)
-        dispatch({
-            type: GET_HINTS_SUCCESS,
-            payload: res.data
-        })
-        dispatch(loadUser(token));
-    } catch (error) {
-        dispatch({
-            type: GET_HINTS_FAILURE,
-        })
-    }
-}
+//     try {
+//         dispatch({type: GET_HINTS_REQUEST})
+//         const res = await axios.post(proxy + '/api/hint/',body, config)
+//         dispatch({
+//             type: GET_HINTS_SUCCESS,
+//             payload: res.data
+//         })
+//         dispatch(loadUser(token));
+//     } catch (error) {
+//         dispatch({
+//             type: GET_HINTS_FAILURE,
+//         })
+//     }
+// }

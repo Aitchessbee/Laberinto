@@ -11,6 +11,7 @@ import Login from "./screens/Login";
 import Team from "./components/team/Team";
 import Room from "./screens/Room";
 import Question from "./screens/Question";
+import Hint from "./components/Hint/Hint";
 import Deadend from "./components/deadend/deadend";
 import OneDoor from "./screens/doorpages/one";
 import ThreeDoors from "./screens/doorpages/three";
@@ -41,6 +42,7 @@ function App() {
               <PrivateRoute exact path="/maze/NA" component={Deadend} />
               <PrivateRoute path="/maze/:roomId" component={Room} />
               <PrivateRoute path="/path/:qID" component={Question} />
+              <PrivateRoute path="/hint/:qID" component={Hint} />
               <Route path="/rulebook" component={Rules} />
               <Route component={notFound} />
             </Switch>
