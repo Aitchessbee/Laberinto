@@ -58,6 +58,7 @@ const Question = ({match}) => {
     const hintHandler = (e) => {
         e.preventDefault();
         dispatch(getHints(auth.key, match.params.qID));
+        
     }
     const takeBack = () =>{
       history.push(`/maze/${auth.checkpoint}`);
@@ -111,7 +112,7 @@ const Question = ({match}) => {
           {question && question.is_solved ?<Fragment><h4>You have already solved this question.</h4> <button onClick={nextRoom} className="goback-btn hint">Continue to next room</button></Fragment>
  : <Fragment>
             <div className='answer-submission'>
-            <input type='text' placeholder='answer' value={answer} onChange={e => setAnswer(e.target.value)} /><br/>
+            <input type='text' placeholder='ans1#ans2' value={answer} onChange={e => setAnswer(e.target.value)} /><br/>
             
             {questions.answerLoading ? <Spinner animation="border" variant="danger" className='answer-spinner'/>
             : <Fragment>{hint?
@@ -133,12 +134,12 @@ const Question = ({match}) => {
             </div>
             {questions.answer === 'incorrect'?
             <Notif text="Your answer was incorrect" color='danger'/>:''}
-            <Modal show={show} onHide={handleClose}>
+            {/* <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Hint</Modal.Title>
         </Modal.Header>
         <Modal.Body>{hint? hint.hint : (questions && questions.hintLoading ? <Spinner animation='border' variant='danger'/> :'Not enough points for hint')  }</Modal.Body>
-      </Modal>
+      </Modal> */}
         
         {question && question.error &&
           <Notif text={question.error} color='danger'/>

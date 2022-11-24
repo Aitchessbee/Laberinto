@@ -13,6 +13,20 @@
   animation-play-state: running;
 }
 
+@media screen and (max-width: 1000px) {
+  .symbol {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .symbol {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 .symbol1,
 .symbol2,
 .symbol3,

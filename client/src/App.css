@@ -715,7 +715,7 @@ label {
   padding: 10px;
   background-color: red;
   color: white;
-  width: 15%;
+  /* width: 15%; */
   margin: 20px;
 }
 .hint {
@@ -744,7 +744,7 @@ label {
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 3%;
   overflow: hidden;
   position: relative;
@@ -806,9 +806,63 @@ label {
   position: absolute;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
   .port:nth-child(1) {
     margin-top: 20%;
+    margin-left: 10%;
+  }
+  .port:nth-child(2) {
+    margin-top: 40%;
+    margin-left: 22%;
+  }
+  .port:nth-child(3) {
+    margin-top: 40%;
+    margin-left: 65%;
+  }
+  .port:nth-child(4) {
+    margin-top: 20%;
+    margin-left: 75%;
+  }
+  .port:nth-child(5) {
+    margin-top: 20%;
+    margin-left: 43%;
+  }
+  .port {
+    width: 100% !important;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .one-door:nth-child(1) {
+    position: static;
+    margin-top: 30%;
+  }
+
+  .room {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .port {
+    position: static !important;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .room-back {
+    margin-top: 0%;
+    bottom: 10%;
+    /* margin-left: -4%; */
+    position: static !important;
+    z-index: 999;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .port:nth-child(1) {
+    margin-top: 30%;
     margin-left: 0%;
   }
   .port:nth-child(2) {
@@ -902,10 +956,12 @@ label {
 }
 
 .room-back {
-  margin-top: 30%;
-  margin-left: -4%;
+  /* margin-top: 30%; */
+  bottom: 10%;
+  left: 45%;
   position: fixed;
   z-index: 999;
+  /* display: block; */
 }
 
 .room-back-three {

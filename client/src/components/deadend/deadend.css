@@ -1,9 +1,13 @@
 .deadend-main{
     background-color: black;
     height: 100vh;
-    padding-top: 10%;
-    
+    padding-top: 150px;
 }
+
+/* @media screen and (max-width: 600px) {
+    padding
+} */
+
 .deadend-img{
     width: 50%;
 }
