@@ -1,3 +1,30 @@
+.hint-container {
+  background-color: #333;
+  min-height: 100vh;
+  padding-top: 120px;
+}
+
+.hints-menu {
+  display: flex;
+  color: white;
+  font-family: "Montserrat";
+  overflow-x: scroll;
+  margin-left: 20px;
+}
+
+.hint-menu-item {
+  margin-right: 25px;
+  width: fit-content;
+  white-space: nowrap;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+
+.Selected {
+  background-color: #630000;
+}
+
 h1 {
   font-size: 2.5rem;
   font-family: "Montserrat";
@@ -209,6 +236,10 @@ input {
   font-weight: 300;
 }
 
+#bid-input {
+  padding-left: 10px;
+}
+
 @media screen and (max-width: 64rem) {
   .col-sponsor {
     width: calc(33.333333% - 2rem);
@@ -227,3 +258,4 @@ input {
     margin: 0 0 2rem 0;
   }
 }
+  

@@ -121,9 +121,14 @@ const Question = ({match}) => {
             : <Fragment>{hint?
             <button onClick={handleShow} className='hint'>Hint</button> 
             :
-            <button onClick={clickHandler} className='hint'>
-              <LockIcon/>
-              Hint:{hintPoints}</button>
+            // <button onClick={clickHandler} className='hint'>
+            //   <LockIcon/>
+            //   Hint:{hintPoints}</button>
+            // }
+              <Link to={"/hint/" + match.params.qID} className='hint' target="_blank">
+                <LockIcon/>
+                Hint:{hintPoints}
+              </Link>
             }
             
             <button onClick={answerHandler}>Submit</button>

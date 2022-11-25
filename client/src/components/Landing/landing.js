@@ -1,7 +1,7 @@
 import React, {useEffect, Fragment} from 'react';
 import './Landing.css';
 import Countdown from '../Countdown/countdown.js';
-import Sponsors from '../Sponsors/sponsors.js';
+// import Sponsors from '../Sponsors/sponsors.js';
 import RegisterButton from '../RegisterButton/registerButton.js';
 import Notif from '../Toast/LoginToast'
 import {useSelector} from 'react-redux';
@@ -53,9 +53,9 @@ const Landing =()=>{
         <RegisterButton></RegisterButton>
       </div>}
     </div>
-      <div className="sponsors">
+      {/* <div className="sponsors">
         <Sponsors></Sponsors>
-      </div>
+      </div> */}
   </div>
   {/* {auth.error && auth.error.map((error) => {
         return (

@@ -1,12 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  color: rgb(255, 255, 255);
-}
-
-h1 {
+/* h1 {
   font-size: 2.5rem;
   font-family: "Montserrat";
   font-weight: normal;
@@ -25,10 +17,11 @@ p {
   text-align: justify;
   font-size: 1.5rem;
   font-family: "Montserrat";
-}
+} */
 .accordion {
   max-width: 600px;
   margin: 2rem auto;
+  color: white;
 }
 
 .accordion-title {
