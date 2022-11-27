@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { proxy } from "../../../actions/types";
+import Notif from "../../Toast/NewToast";
 
 
 // const arrayOfTeams = [
@@ -64,6 +65,7 @@ import { proxy } from "../../../actions/types";
 function MakeOffer({ questionId }) {
   const [makeOffersList, setMakeOffersList] = useState([]);
   const [bidList, setBidList] = useState({});
+  const [notifText, setNotifText] = useState("");
 
   const auth = useSelector((state) => state.auth);
 
@@ -99,12 +101,14 @@ function MakeOffer({ questionId }) {
     };
 
     try {
-        const res = await axios.post(proxy + '/api/trade/make-offer/', data, config)
-        console.log(res)
-
+        const res = await axios.post(proxy + '/api/trade/make-offer/', data, config);
+        console.log(res);
+        setNotifText("Offer sent successfully");
 
     } catch (error) {
         console.log(error)
+        setNotifText("Error");
+
     }
 
 

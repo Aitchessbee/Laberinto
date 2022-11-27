@@ -1,14 +1,15 @@
 .hint-container {
-  background-color: #333;
+  background-color: #222;
   min-height: 100vh;
   padding-top: 120px;
+  overflow: hidden;
 }
 
 .hints-menu {
   display: flex;
   color: white;
   font-family: "Montserrat";
-  overflow-x: scroll;
+  overflow-x: auto;
   margin-left: 20px;
 }
 

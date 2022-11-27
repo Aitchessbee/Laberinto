@@ -639,7 +639,7 @@ nav.shift ul li Link:hover:after {
   width: 100vw;
   height: 512px;
   overflow: hidden;
-  margin-bottom: 10vh;
+  /* margin-bottom: 10vh; */
   background-color: #080f0f;
 }
 #bg {
@@ -807,15 +807,15 @@ label {
 }
 
 @media screen and (max-width: 1000px) {
-  .port:nth-child(1) {
+  .port:nth-child(1), .three-doors:nth-child(1){
     margin-top: 20%;
     margin-left: 10%;
   }
-  .port:nth-child(2) {
+  .port:nth-child(2), .three-doors:nth-child(2) {
     margin-top: 40%;
     margin-left: 22%;
   }
-  .port:nth-child(3) {
+  .port:nth-child(3), .three-doors:nth-child(3) {
     margin-top: 40%;
     margin-left: 65%;
   }
@@ -834,7 +834,7 @@ label {
 
 
 @media screen and (max-width: 600px) {
-  .one-door:nth-child(1) {
+  .one-door:nth-child(1){
     position: static;
     margin-top: 30%;
   }
@@ -844,7 +844,7 @@ label {
     flex-direction: column;
   }
 
-  .port {
+  .port, .three-doors {
     position: static !important;
     margin-bottom: 10%;
     display: flex;
@@ -861,15 +861,15 @@ label {
     margin-bottom: 20px;
   }
 
-  .port:nth-child(1) {
+  .port:nth-child(1), .three-doors:nth-child(1) {
     margin-top: 30%;
     margin-left: 0%;
   }
-  .port:nth-child(2) {
+  .port:nth-child(2), .three-doors:nth-child(2) {
     margin-top: 0%;
     margin-left: 0%;
   }
-  .port:nth-child(3) {
+  .port:nth-child(3), .three-doors:nth-child(3) {
     margin-top: 0%;
     margin-left: 0%;
   }

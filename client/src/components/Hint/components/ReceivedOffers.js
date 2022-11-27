@@ -56,14 +56,15 @@ function ReceivedOffers({ questionId }) {
 
         setReceivedOffers(
         //   res.data.map((team) => {
-            res.data.map(({ title, question, content }) => {
+            res.data.map((team) => {
                 return (
                     <div className="accordion">
                         
                         <Offermenu
-                            title={title}
-                            question={question}
-                            content={content}
+                            title={team.teamName + " - Bid:  " + team.points}
+                            question={team.question}
+                            content={team.level}
+                            offerId={team.id}
                         />
                         
                     </div>

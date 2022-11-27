@@ -29,6 +29,7 @@ const Question = ({match}) => {
     const question = useSelector(state => state.questions.questionById);
 
     const questionText = (question && question.q_text) || 'Please Wait'
+    const locationText = (question && question.l_text) || 'Please Wait'
     const url = (question && question.q_image) || ''
 
     const auth = useSelector(state => state.auth);
@@ -108,6 +109,9 @@ const Question = ({match}) => {
 /> */}
 {questionText}
 </p>
+<p className='question-text'>
+Location - {locationText}
+</p>
 </h4>
 { (question && question.q_image) ? <h4><p><a target="_blank" rel="noopener noreferrer" href={url}><Badge bg="secondary">Click Me!</Badge></a></p></h4> : ''}
 
@@ -126,8 +130,8 @@ const Question = ({match}) => {
             //   Hint:{hintPoints}</button>
             // }
               <Link to={"/hint/" + match.params.qID} className='hint' target="_blank">
-                <LockIcon/>
-                Hint:{hintPoints}
+                {/* <LockIcon/> */}
+                Hint Portal
               </Link>
             }
             

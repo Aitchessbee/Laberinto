@@ -41,7 +41,7 @@ const Navbar = () => {
               <p className='nav-link'><Badge bg="danger">{teamName}</Badge></p></li>}
               {!auth.isAuthenticated? 
                 <li className="nav-item">
-              <a className='nav-link' href = '/#sponsors'>Our Sponsors</a>
+              {/* <a className='nav-link' href = '/#sponsors'>Our Sponsors</a> */}
               </li>
                :
               <li className='nav-item'><p  className='nav-link'>Total Points: <Badge bg ="danger">{teamPoints}</Badge>

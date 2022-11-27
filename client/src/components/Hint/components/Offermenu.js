@@ -1,9 +1,37 @@
 import React from "react";
 import { useState } from "react";
 import "./offermenu.css";
+import axios from "axios"
+import { proxy } from "../../../actions/types";
+import { useSelector } from "react-redux";
 
-const Offermenu = ({ title, question, content }) => {
+const Offermenu = ({ title, question, content, offerId }) => {
   const [isActive, setIsActive] = useState(false);
+  const [buttonText, setButtonText] = useState("Accept Offer");
+  const auth = useSelector((state) => state.auth);
+
+  const submitHandler = async (e) => {
+    e.preventDefault()
+
+    const config = {
+      headers: {
+        Authorization: `Token ${auth.key}`,
+      },
+    };
+    const data = {
+        "offerID": `${offerId}`,
+    };
+
+    try {
+        const res = await axios.post(proxy + '/api/trade/accept-offer/', data, config)
+        console.log(res)
+        setButtonText("Accepted")
+
+    } catch (error) {
+        console.log(error)
+        setButtonText("Error")
+    }
+  }
 
   return (
     <div className="accordion-item">
@@ -18,11 +46,10 @@ const Offermenu = ({ title, question, content }) => {
       {isActive && (
         <div className="accordion-content">
           <p>{question}</p>
-          <p>{content}</p>
-          <form action="" method="post">
-            <input type="text " placeholder="Enter answer" />
+          <p>Team Level: {content}</p>
+          <form action="" onSubmit={(e) => {submitHandler(e)}}>
             <button className="btn" type="submit">
-              Accept Offer
+              {buttonText}
             </button>
           </form>
         </div>
